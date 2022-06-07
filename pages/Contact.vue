@@ -104,14 +104,27 @@
 <script>
 import { load } from 'recaptcha-v3'
 
-function httpPost(theUrl, formData, callback) {
+function httpPost(formData, callback) {
   var xmlHttp = new XMLHttpRequest()
-  xmlHttp.open('POST', theUrl, true) // true for asynchronous
+  xmlHttp.open('POST', "https://formsubmit.co/ajax/2eece65b36ddffd4b1682de2f7dd00be", true) // true for asynchronous
+  xmlHttp.setRequestHeader('Content-type', 'application/json')
+  xmlHttp.setRequestHeader('Accept', 'application/json')
   // xmlHttp.setRequestHeader('Content-Type', 'text/plain')
   xmlHttp.onload = function () {
     callback(this.responseText)
   }
-  xmlHttp.send(formData)
+  xmlHttp.send(JSON.stringify(formData))
+}
+
+const verifyRecap = (token, callback) => {
+  var xmlHttp = new XMLHttpRequest()
+  xmlHttp.open('POST', "https://www.google.com/recaptcha/api/siteverify?secret=6LesOikgAAAAAGwweyUjjVpxaulF7NZCw8JuxIJV&response=" + token, true)
+  // xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*')
+  // xmlHttp.setRequestHeader('Sec-Fetch-Mode', 'no-cors')
+  xmlHttp.onload = function () {
+    callback(this.responseText)
+  }
+  xmlHttp.send(token)
 }
 
 function debounce(fn, delay) {
@@ -142,8 +155,8 @@ export default {
   },
   mounted() {
     load('6LesOikgAAAAAGwweyUjjVpxaulF7NZCw8JuxIJV', {
-      useRecaptchaNet: true,
-      autoHideBadge: true
+      useRecaptchaNet: false,
+      autoHideBadge: false
     }).then((recaptcha) => {
       this.recaptcha = recaptcha
     })
@@ -209,13 +222,14 @@ export default {
     onVerify: function (response) {
       this.loading = true
       console.log('Verify: ' + response)
-      var data = new FormData()
-      data.append('nom', this.nom)
-      data.append('email', this.email)
-      data.append('message', this.message)
-      if (this.tel) data.append('tel', this.tel)
-      if (this.sujet) data.append('sujet', this.sujet)
-      httpPost('http://127.0.0.1', data, (reponse) => {
+      verifyRecap(response, alert)
+      const data = {}
+      data.nom = this.nom
+      data.email = this.email
+      data.message = this.message
+      if (this.tel) data.tel = this.tel
+      if (this.sujet) data.sujet = this.sujet
+      httpPost(data, (reponse) => {
         this.loading = false
         alert(reponse)
       })

@@ -13,11 +13,11 @@ export default defineNuxtConfig({
     script: [],
   },
   build: {
-    transpile: [
+    /* transpile: [
       '@fortawesome/vue-fontawesome',
       '@fortawesome/fontawesome-svg-core',
       '@fortawesome/pro-solid-svg-icons'
-    ]
+    ]*/
   },
   css: ["assets/styles/main.scss"],
   loading: { color: '#0c64c1' },
