@@ -5,15 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-chrome",
+            "type": "browse-lite",
+            "name": "Browse Lite: Attach",
+            "request": "attach"
+        },
+        {
+            "type": "browse-lite",
             "request": "launch",
-            "name": "Brave",
-            "runtimeExecutable": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
-            "runtimeArgs": [
-                "--remote-debugging-port=9222"
-            ],
-            "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}"
+            "name": "Browse Lite: Launch",
+            "url": "http://localhost:3000"
         }
     ]
 }

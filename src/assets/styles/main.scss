@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+@import "settings";
+
+//bulma
+@import "./node_modules/bulma/sass/utilities/_all";
+@import "./node_modules/bulma/sass/base/_all";
+@import "./node_modules/bulma/sass/helpers/_all";
+// @import "./node_modules/bulma/sass/elements/_all";
+@import "./node_modules/bulma/sass/elements/button";
+@import "./node_modules/bulma/sass/elements/container";
+@import "./node_modules/bulma/sass/elements/content";
+@import "./node_modules/bulma/sass/elements/icon";
+// @import "./node_modules/bulma/sass/elements/image";
+@import "./node_modules/bulma/sass/elements/other";
+@import "./node_modules/bulma/sass/elements/notification";
+@import "./node_modules/bulma/sass/elements/title";
+@import "./node_modules/bulma/sass/elements/box";
+@import "./node_modules/bulma/sass//form/_all";
+// @import "./node_modules/bulma/sass/components/card";
+// @import "./node_modules/bulma/sass/components/dropdown";
+// @import "./node_modules/bulma/sass/components/modal";
+// @import "./node_modules/bulma/sass/components/tabs";
+// @import "./node_modules/bulma/sass/components/message";
+@import "./node_modules/bulma/sass/components/navbar";
+@import "./node_modules/bulma/sass/grid/_all";
+// @import "~~/node_modules/bulma/sass/grid/tiles";
+// @import "~~/node_modules/bulma/sass/grid/columns";
+@import "./node_modules/bulma/sass/layout/_all";
+// @import "~~/node_modules/bulma/sass/layout/section";
+// @import "~~/node_modules/bulma/sass/layout/hero";
+// @import "~~/node_modules/bulma/sass/layout/footer";
+
+.navbar.is-fixed-top {
+  z-index: 9999;
+}
+.navbar-brand.left-burger {
+  align-items: center;
+
+  .navbar-burger {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@include tablet {
+  .navbar {
+    min-height: 4rem;
+
+    & > .container {
+      min-height: 4rem;
+    }
+
+    .navbar-item img {
+      max-height: 3rem;
+    }
+  }
+
+  .navbar-brand,
+  .navbar-tabs {
+    min-height: 4rem;
+  }
+
+  .navbar-item {
+    &.is-tab {
+      min-height: 4rem;
+    }
+  }
+
+  html.has-navbar-fixed-top,
+  body.has-navbar-fixed-top {
+    padding-top: 6rem;
+  }
+
+  html.has-navbar-fixed-bottom,
+  body.has-navbar-fixed-bottom {
+    padding-bottom: 4rem;
+  }
+
+  .shrink {
+    min-height: 3.25rem;
+
+    .navbar-brand,
+    .navbar-tabs {
+      min-height: 3.25rem;
+    }
+
+    .navbar-item img {
+      max-height: 2rem;
+    }
+
+    .navbar-item {
+      &.is-tab {
+        min-height: 3.25rem;
+      }
+    }
+  }
+
+  nav.navbar {
+    transition: all 0.4s ease;
+
+    .navbar-item img,
+    .navbar-item button {
+      transition: all 0.4s ease;
+    }
+  }
+}
+
+.hero {
+  &.is-custom {
+    .hero-body {
+      padding: 1.5rem 1.5rem;
+    }
+  }
+}
+
+@include tablet {
+  .hero {
+    &.is-custom {
+      .hero-body {
+        padding: 5rem 1.5rem;
+      }
+    }
+  }
+}
+
+.is-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: $background;
+  padding: 1rem 1.5rem 0.5rem;
+}
+
+@include tablet {
+  .is-flex {
+    flex-direction: row;
+  }
+}
+
+.image {
+  display: block;
+  position: relative;
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  &.is-4by1 {
+    padding-top: 25%;
+
+    img {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+html,
+body,
+#app,
+.container {
+  height: 100%;
+}
+
+#app {
+  position: relative;
+}
+
+.strokeme {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
