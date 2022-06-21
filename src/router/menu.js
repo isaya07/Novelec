@@ -3,7 +3,7 @@ const Menu = [
     name: "Acceuil",
     path: "/",
     alias: "/acceuil",
-    icon: "mdiHomeCircleOutline",
+    icon: "MyHome",
     component: () => import("../views/MainPage.vue"),
     meta: {
       description: "Novelec entreprise d'électricité générale et tertiaire, dépannage, domotique, rénovation",

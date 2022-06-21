@@ -1,14 +1,22 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
-import mdiVue from "mdi-vue/v3";
-import * as mdijs from "@mdi/js";
-import "./assets/styles/main.scss";
+import { createApp } from "vue"
+import App from "./App.vue"
+import router from "./router"
+import "./assets/styles/main.scss"
+import VueProgressBar from "@aacassandra/vue3-progressbar"
 
-const app = createApp(App);
+const options = {
+  color: "#aa0000",
+  failedColor: "#aa0000",
+  thickness: "3px",
+  transition: {
+    speed: "0.2s",
+    opacity: "0.6s",
+    termination: 300,
+  },
+  autoRevert: true,
+  location: "top",
+  inverse: false,
+}
+const app = createApp(App)
 
-app.use(router);
-app.use(mdiVue, {
-  icons: mdijs,
-});
-app.mount("#app");
+app.use(VueProgressBar, options).use(router).mount("#app")

@@ -3,6 +3,7 @@ import { onMounted, ref } from "vue"
 import router from "@/router"
 import { Menu } from "@/router/menu"
 import Logo from "@/assets/logo.png?webp&quality=80"
+import IconItem from "@/components/IconItem.vue"
 
 const menus = Menu
 const topbar = ref(null)
@@ -61,11 +62,8 @@ router.beforeEach((to, from, next) => {
       <div class="navbar-start">
         <template v-for="(item, idx) in menus" :key="idx">
           <router-link :to="item.path" class="navbar-item">
-            <span v-if="item.path !== '/'" class="icon is-medium is-nav-icon has-text-danger">
-              <mdicon :name="item.icon" size="32" />
-            </span>
-            <span v-else class="icon is-medium has-text-danger is-nav-icon">
-              <img alt="Vue logo" src="@/assets/logo.svg?url" size="32" />
+            <span class="icon is-medium is-nav-icon has-text-danger">
+              <IconItem :icon="item.icon" />
             </span>
             <span>
               {{ item.name }}

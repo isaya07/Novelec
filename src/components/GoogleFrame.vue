@@ -1,33 +1,21 @@
-/* eslint-disable vue/max-len */ /* eslint-disable max-len */
 <script setup>
-defineProps({
-  width: {
-    type: Number,
-    default: 600,
-  },
-  height: {
-    type: Number,
-    default: 450,
-  },
-})
+const url =
+  /* eslint-disable-next-line max-len */ /* eslint-disable-next-line vue/max-len */
+  "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJW2BTT-Tu9UcRdJq2CFpeSjA&key=AIzaSyBa1Nt9gSpYLW1yZukH6XZKcpZ5a4_S0F0"
 </script>
+
 <template>
   <div class="map-responsive">
-    <iframe
-      style="border: 0"
-      loading="lazy"
-      allowfullscreen
-      src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJW2BTT-Tu9UcRdJq2CFpeSjA&key=AIzaSyBa1Nt9gSpYLW1yZukH6XZKcpZ5a4_S0F0"
-    ></iframe>
+    <iframe style="border: 0" loading="lazy" allowfullscreen :src="url"></iframe>
   </div>
 </template>
 
 <style>
 .map-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
+  padding-bottom: 104%;
   position: relative;
   height: 0;
+  overflow: hidden;
 }
 
 .map-responsive iframe {

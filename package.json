@@ -9,14 +9,14 @@
     "deploy": "git subtree push --prefix dist main main"
   },
   "dependencies": {
-    "@mdi/js": "^6.7.96",
+    "@aacassandra/vue3-progressbar": "^1.0.3",
     "bulma": "^0.9.4",
-    "mdi-vue": "^3.0.13",
     "vue": "^3.2.36",
     "vue-recaptcha": "^2.0.2",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.1.21",
     "@rushstack/eslint-patch": "^1.1.0",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/eslint-config-prettier": "^7.0.0",
@@ -24,6 +24,8 @@
     "eslint-plugin-vue": "^8.2.0",
     "prettier": "^2.5.1",
     "sass": "^1.52.3",
+    "unplugin-icons": "^0.14.5",
+    "unplugin-vue-components": "^0.19.6",
     "vite": "^2.9.9",
     "vite-imagetools": "^4.0.4",
     "vite-svg-loader": "^3.3.0"
