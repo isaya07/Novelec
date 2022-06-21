@@ -2,7 +2,11 @@
 import { defineAsyncComponent } from "vue"
 
 import BandeauCarousel from "@/components/BandeauCarousel.vue"
-const MapView = defineAsyncComponent(() => import("@/components/MapView.vue"))
+// const MapView = defineAsyncComponent(() => import("@/components/MapView.vue"))
+const GoogleFrame = defineAsyncComponent(() => import("@/components/GoogleFrame.vue"))
+
+let mapWidth = 600
+let mapHeight = 400
 </script>
 
 <template>
@@ -48,7 +52,8 @@ const MapView = defineAsyncComponent(() => import("@/components/MapView.vue"))
       </section>
       <section>
         <div class="box">
-          <MapView />
+          <!-- <MapView /> -->
+          <GoogleFrame :width="mapWidth" :height="mapHeight" />
         </div>
       </section>
     </div>

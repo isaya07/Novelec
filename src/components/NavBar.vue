@@ -2,6 +2,7 @@
 import { onMounted, ref } from "vue"
 import router from "@/router"
 import { Menu } from "@/router/menu"
+import Logo from "@/assets/logo.png?webp&quality=80"
 
 const menus = Menu
 const topbar = ref(null)
@@ -53,7 +54,7 @@ router.beforeEach((to, from, next) => {
         <span aria-hidden="true"></span>
       </div>
       <router-link class="navbar-item" to="/">
-        <img src="@/assets/logo.png" alt="Logo" />
+        <img :src="Logo" alt="Logo" />
       </router-link>
     </div>
     <div id="navbarNovelec" class="navbar-menu">

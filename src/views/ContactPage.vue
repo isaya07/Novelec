@@ -197,7 +197,8 @@
               </div>
             </div>
             <div class="column">
-              <MapView />
+              <!--<MapView />-->
+              <GoogleFrame :width="mapWidth" :height="mapHeight" />
             </div>
           </div>
         </div>
@@ -210,10 +211,13 @@
 import { defineAsyncComponent, ref, onMounted, watch } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
-const MapView = defineAsyncComponent(() => import("@/components/MapView.vue"))
+// const MapView = defineAsyncComponent(() => import("@/components/MapView.vue"))
+const GoogleFrame = defineAsyncComponent(() => import("@/components/GoogleFrame.vue"))
 const NotifItem = defineAsyncComponent(() => import("@/components/NotifItem.vue"))
 
 const site_key = "6LeEME0UAAAAAJKfpsqLI0iOTTYAkN9XMc_3FfLk"
+let mapWidth = 600
+let mapHeight = 400
 
 function httpPost(formData, callback) {
   var xmlHttp = new XMLHttpRequest()

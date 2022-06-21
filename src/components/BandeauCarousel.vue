@@ -1,12 +1,17 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue"
+import imgC1 from "../assets/Bandeau/electrician.jpg?webp&quality=80"
+import imgC2 from "../assets/Bandeau/hager-domovea.jpg?webp&quality=80"
+import imgC3 from "../assets/Bandeau/office.jpg?webp&quality=80"
+import imgC4 from "../assets/Bandeau/light-bulb.jpg?webp&quality=80"
 
-const images = [
+/* const images = [
   new URL("../assets/Bandeau/electrician.jpg", import.meta.url),
   new URL("../assets/Bandeau/hager-domovea.jpg", import.meta.url),
   new URL("../assets/Bandeau/office.jpg", import.meta.url),
   new URL("../assets/Bandeau/light-bulb.jpg", import.meta.url),
-]
+] */
+const images = [imgC1, imgC2, imgC3, imgC4]
 
 let interval = null
 let init = true

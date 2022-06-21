@@ -7,6 +7,7 @@ module.exports = {
   env: {
     "vue/setup-compiler-macros": true,
   },
+  ignorePatterns: ["*dist/*"],
   rules: {
     "max-len": ["error", 120],
     semi: "off",
