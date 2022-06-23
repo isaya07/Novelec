@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer is-fixed-bottom">
     <div class="content has-text-centered" itemscope itemtype="http://schema.org/Organization">
       <span itemprop="name"><strong>Novelec</strong> - Lilian Monchalin</span>
       <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">

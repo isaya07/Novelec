@@ -11,13 +11,13 @@ const Menu = [
     },
   },
   {
-    name: "Dépannage",
-    path: "/depannage",
-    icon: "HammerWrench",
-    component: () => import("../views/DepannagePage.vue"),
+    name: "Electricité",
+    path: "/electricite",
+    icon: "LightningBoltCircle",
+    component: () => import("../views/ElectricitePage.vue"),
     meta: {
-      description: "Nous nous déplaçons, dans les meilleurs délais, pour tous types de dépannage électrique",
-      title: "Dépannage",
+      description: "Novelec entreprise d'électricité générale et tertiaire, dépannage, rénovation",
+      title: "Electricité",
     },
   },
   {
@@ -27,7 +27,7 @@ const Menu = [
     component: () => import("../views/DomotiquePage.vue"),
     meta: {
       description:
-        "Spécialisé en domotique l'entreprise Novelec réalise pour vous un habitât plus simple et fonctionnel",
+        "Spécialisé en domotique l'entreprise Novelec réalise pour vous un habitât simple, fonctionnel et connecté",
       title: "Domotique",
     },
   },

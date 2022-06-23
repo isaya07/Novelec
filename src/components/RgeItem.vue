@@ -1,10 +1,10 @@
 <script setup>
-import RgeLogo from "../assets/logo-qualipac-RGE.png?webp&quality=100&w=150&webp"
+import RgeLogo from "../assets/logo-qualipac-RGE.webp"
 </script>
 
 <template>
   <div class="content">
-    <img class="is-pulled-right" :src="RgeLogo" alt="Rge Logo" />
+    <img class="img-text mb-2" :src="RgeLogo" alt="Rge Logo" width="150" />
     <h4 class="title is-4">RGE, QualiPAC&nbsp;: des certifications qui rassurent</h4>
     <p>
       Novelec a su apporter la preuve des compétences techniques en matières d'électricité, de chauffage et de

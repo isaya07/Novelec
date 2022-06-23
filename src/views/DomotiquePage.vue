@@ -1,6 +1,18 @@
+<script setup>
+import Domo from "../assets/domotique.jpg"
+// import Depannage from "../assets/dépannage-2.jpg"
+import BandeauItem from "../components/BandeauItem.vue"
+import ContentBox from "../components/ContentBox.vue"
+
+const title = "Electricité général et tertiaire, dépannage. Neuf et rénovation"
+const subtitle = "L'entreprise Novelec vous accompagne dans tous vos travaux électrique..."
+</script>
+
 <template>
-  <div class="container is-widescreen has-text-left is-flex">
-    <main>
+  <div>
+    <BandeauItem :image="Domo" />
+    <ContentBox :title="title" :subtitle="subtitle" />
+    <div class="container is-widescreen has-text-left">
       <section class="section">
         <div class="content">
           <h3>Domotique</h3>
@@ -19,7 +31,8 @@
           <p class="texte">
             Chaque action pourra être contrôlée de manière automatique (à horaire fixe, en fonction de la
             luminosité...), ou par modules de commande (télécommandes, écrans tactiles, ordinateur…). Tout ceci nous
-            permet <strong>d'améliorer</strong> la vie au quotidien en facilitant certaines tâches, et en intégrant les
+            permet
+            <strong>d'améliorer</strong> la vie au quotidien en facilitant certaines tâches, et en intégrant les
             <strong>technologies</strong> d’aujourd’hui directement au centre de la maison.
           </p>
           <p class="texte">
@@ -29,8 +42,6 @@
           </p>
         </div>
       </section>
-    </main>
+    </div>
   </div>
 </template>
-
-<script></script>

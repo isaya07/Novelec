@@ -4,7 +4,7 @@
     <div class="title is-2 has-text-centered is-size-4-mobile">Nos Atouts</div>
     <div class="columns is-mobile has-text-centered">
       <div class="column is-one-quarter">
-        <div class="circle">
+        <div class="circle has-text-white">
           <mdi-bullseye-arrow font-size="2em" />
         </div>
         <div class="mt-1 has-text-weight-bold is-size-5 is-size-7-mobile">Savoir faire</div>
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="column is-one-quarter">
-        <div class="circle">
+        <div class="circle has-text-white">
           <mdi-account-supervisor-circle-outline font-size="2em" />
         </div>
         <div class="mt-1 has-text-weight-bold is-size-5 is-size-7-mobile">Expérience</div>
@@ -22,7 +22,7 @@
         <div class="is-size-7-mobile">Nous intervenons sur tous types de bâtiments depuis plus de neuf ans.</div>
       </div>
       <div class="column is-one-quarter">
-        <div class="circle">
+        <div class="circle has-text-white">
           <mdi-calendar-clock-outline font-size="2em" />
         </div>
         <div class="mt-1 has-text-weight-bold is-size-5 is-size-7-mobile">Respect des délais</div>
@@ -30,7 +30,7 @@
         <div class="is-size-7-mobile">NNous vous garantissons un travail soigné, réalisé à temps.</div>
       </div>
       <div class="column is-one-quarter">
-        <div class="circle">
+        <div class="circle has-text-white">
           <mdi-timer-outline font-size="2em" />
         </div>
         <div class="mt-1 has-text-weight-bold is-size-5 is-size-7-mobile">Disponibilité</div>

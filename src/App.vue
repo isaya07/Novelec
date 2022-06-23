@@ -30,7 +30,12 @@ router.afterEach(() => {
     <vue-progress-bar></vue-progress-bar>
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
-        <component :is="Component" />
+        <Suspense>
+          <component :is="Component" />
+
+          <!-- loading state -->
+          <template #fallback> Loading... </template>
+        </Suspense>
       </transition>
     </router-view>
     <ScrollToTop />

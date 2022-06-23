@@ -2,19 +2,20 @@
 import { onMounted, ref } from "vue"
 import router from "@/router"
 import { Menu } from "@/router/menu"
-import Logo from "@/assets/logo.png?webp&quality=80"
+import Logo from "@/assets/logo.png?webp"
 import IconItem from "@/components/IconItem.vue"
 
 const menus = Menu
 const topbar = ref(null)
+const burger = ref(null)
+const menu = ref(null)
+const telBut = ref(null)
 let visible = false
 
 function show() {
   visible = !visible
-  var burger = document.querySelector(".navbar-burger")
-  var menu = document.querySelector(".navbar-menu")
-  burger.classList.toggle("is-active")
-  menu.classList.toggle("is-active")
+  burger.value.classList.toggle("is-active")
+  menu.value.classList.toggle("is-active")
 }
 
 onMounted(() => {
@@ -26,6 +27,37 @@ onMounted(() => {
       topbar.value.classList.remove("shrink")
       topbar.value.classList.add("is-spaced")
     }
+  }
+
+  function isTouch() {
+    let brand = document.querySelector(".navbar-brand")
+    if (telBut.value.parentNode) {
+      let newTelBut = telBut.value.parentNode.removeChild(telBut.value)
+      brand.appendChild(newTelBut)
+    }
+  }
+  function isDesk() {
+    if (telBut.value.parentNode) {
+      let newTelBut = telBut.value.parentNode.removeChild(telBut.value)
+      topbar.value.appendChild(newTelBut)
+    }
+  }
+  const touch = window.matchMedia("(max-width: 1023px)")
+  const nonTouch = window.matchMedia("(min-width: 1024px)")
+
+  touch.addEventListener("change", (e) => {
+    if (e.matches) {
+      isTouch()
+    }
+  })
+  nonTouch.addEventListener("change", (e) => {
+    if (e.matches) {
+      isDesk()
+    }
+  })
+
+  if (touch.matches) {
+    isTouch()
   }
 })
 router.beforeEach((to, from, next) => {
@@ -43,6 +75,7 @@ router.beforeEach((to, from, next) => {
   >
     <div class="navbar-brand left-burger">
       <div
+        ref="burger"
         role="button"
         class="navbar-burger"
         aria-label="menu"
@@ -58,26 +91,31 @@ router.beforeEach((to, from, next) => {
         <img :src="Logo" alt="Logo" />
       </router-link>
     </div>
-    <div id="navbarNovelec" class="navbar-menu">
+    <div id="navbarNovelec" ref="menu" class="navbar-menu">
       <div class="navbar-start">
         <template v-for="(item, idx) in menus" :key="idx">
           <router-link :to="item.path" class="navbar-item">
-            <span class="icon is-medium is-nav-icon has-text-danger">
+            <span class="icon is-medium is-nav-icon has-text-danger is-size-5">
               <IconItem :icon="item.icon" />
             </span>
-            <span>
+            <span class="is-size-6">
               {{ item.name }}
             </span>
           </router-link>
         </template>
       </div>
     </div>
-    <div class="navbar-brand brand-left">
-      <div class="navbar-item">
-        <button class="button is-danger is-rounded is-responsive">
-          <strong>06 86 41 59 53</strong>
-        </button>
-      </div>
+
+    <div ref="telBut" class="navbar-item tel">
+      <button class="button is-danger is-rounded is-responsive">
+        <strong><a class="has-text-white" href="tel:+33686415953">06 86 41 59 53</a></strong>
+      </button>
     </div>
   </nav>
 </template>
+
+<style scoped>
+.tel {
+  margin-left: auto;
+}
+</style>
