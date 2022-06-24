@@ -88,15 +88,15 @@ router.beforeEach((to, from, next) => {
         <span aria-hidden="true"></span>
       </div>
       <router-link class="navbar-item" to="/">
-        <img :src="Logo" alt="Logo" />
+        <img class="mr-2" :src="Logo" alt="Logo" width="160" />
       </router-link>
     </div>
     <div id="navbarNovelec" ref="menu" class="navbar-menu">
       <div class="navbar-start">
         <template v-for="(item, idx) in menus" :key="idx">
           <router-link :to="item.path" class="navbar-item">
-            <span class="icon is-medium is-nav-icon has-text-danger is-size-5">
-              <IconItem :icon="item.icon" />
+            <span v-if="item.icon" class="icon is-nav-icon has-text-danger is-size-5 is-flex-grow-1">
+              <IconItem class="is-align-self-center is-align-items-center" :icon="item.icon" />
             </span>
             <span class="is-size-6">
               {{ item.name }}

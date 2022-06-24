@@ -20,6 +20,13 @@ const generatedRoute = generateRoute(Menu)
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: generatedRoute,
+  scrollBehavior() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ top: 0 })
+      }, 500)
+    })
+  },
 })
 
 function setAttributes(elem, type, val) {

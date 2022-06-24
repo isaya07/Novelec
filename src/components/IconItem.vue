@@ -17,7 +17,9 @@ defineProps({
 
 <template>
   <my-home v-if="icon == 'MyHome'" :style="style" />
-  <mdi-lightning-bolt-circle v-else-if="icon == 'LightningBoltCircle'" :style="style" />
-  <mdi-home-circle-outline v-else-if="icon == 'HomeCircleOutline'" :style="style" />
+  <mdi-home-lightning-bolt-outline v-else-if="icon == 'HomeLightningBoltOutline'" :style="style" />
+  <my-home-plumbing v-else-if="icon == 'HomePlumbing'" :style="style" />
+  <mdi-home-assistant v-else-if="icon == 'HomeAssistant'" :style="style" />
+  <mdi-heat-pump-outline v-else-if="icon == 'HeatPumpOutline'" :style="style" />
   <mdi-email-outline v-else-if="icon == 'EmailOutline'" :style="style" />
 </template>

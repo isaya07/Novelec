@@ -1,9 +1,12 @@
 <script setup>
-import Tableau from "../assets/tableau.jpg"
-import Depannage from "../assets/dépannage-2.jpg"
+//import Tableau from "../assets/tableau.jpg"
+//import Depannage from "../assets/dépannage-2.jpg"
 import BandeauItem from "../components/BandeauItem.vue"
 import IconItem from "../components/IconItem.vue"
 import ContentBox from "../components/ContentBox.vue"
+
+const Tableau = new URL("../assets/tableau.jpg", import.meta.url).href
+const Depannage = new URL("../assets/dépannage-2.jpg", import.meta.url).href
 
 const title = "Electricité général et tertiaire, dépannage. Neuf et rénovation"
 const subtitle = "L'entreprise Novelec vous accompagne dans tous vos travaux électrique..."

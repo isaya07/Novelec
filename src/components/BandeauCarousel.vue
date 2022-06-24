@@ -5,12 +5,23 @@ import imgC2 from "../assets/Bandeau/hager-domovea.jpg?webp&quality=80"
 import imgC3 from "../assets/Bandeau/office.jpg?webp&quality=80"
 import imgC4 from "../assets/Bandeau/light-bulb.jpg?webp&quality=80"*/
 
-const images = ref([
+const ImagesUrl = [
   new URL("../assets/Bandeau/electrician-2.jpg", import.meta.url).href,
   new URL("../assets/Bandeau/hager-domovea-2.jpg", import.meta.url).href,
   new URL("../assets/Bandeau/office-2.jpg", import.meta.url).href,
   new URL("../assets/Bandeau/light-bulb-2.jpg", import.meta.url).href,
-])
+]
+
+const Images = ref([])
+
+for (const imgurl of ImagesUrl) {
+  const img = new Image()
+  img.onload = function () {
+    const newImg = { src: imgurl, width: this.naturalWidth, height: this.naturalHeight }
+    Images.value.push(newImg)
+  }
+  img.src = imgurl
+}
 
 const imagesRef = ref([])
 //const images = [imgC1, imgC2, imgC3, imgC4]
@@ -69,13 +80,29 @@ function setImages() {
       <div class="slider">
         <div class="slider-container">
           <div
-            v-for="(image, index) in images"
+            v-for="(image, index) in Images"
             :key="index"
             class="slider-item has-background"
             :class="index == 0 ? 'is-active' : ''"
           >
-            <img v-if="index == 0" ref="imagesRef" class="is-background" :src="image" alt="Image Slide" />
-            <img v-else ref="imagesRef" class="is-background" :data-url="image" alt="Image Slide" />
+            <img
+              v-if="index == 0"
+              ref="imagesRef"
+              class="is-background"
+              :src="image.src"
+              :width="image.width"
+              :height="image.height"
+              alt="Image Slide"
+            />
+            <img
+              v-else
+              ref="imagesRef"
+              class="is-background"
+              :width="image.width"
+              :height="image.height"
+              :data-url="image.src"
+              alt="Image Slide"
+            />
           </div>
         </div>
       </div>

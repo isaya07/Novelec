@@ -13,7 +13,7 @@ const Menu = [
   {
     name: "Electricité",
     path: "/electricite",
-    icon: "LightningBoltCircle",
+    icon: "HomeLightningBoltOutline",
     component: () => import("../views/ElectricitePage.vue"),
     meta: {
       description: "Novelec entreprise d'électricité générale et tertiaire, dépannage, rénovation",
@@ -21,14 +21,36 @@ const Menu = [
     },
   },
   {
+    name: "Plomberie",
+    path: "/plomberie",
+    icon: "HomePlumbing",
+    component: () => import("../views/PlomberiePage.vue"),
+    meta: {
+      description:
+        "Spécialisé en domotique l'entreprise Novelec réalise pour vous un habitât simple, fonctionnel et connecté",
+      title: "Plomberie",
+    },
+  },
+  {
     name: "Domotique",
     path: "/domotique",
-    icon: "HomeCircleOutline",
+    icon: "HomeAssistant",
     component: () => import("../views/DomotiquePage.vue"),
     meta: {
       description:
         "Spécialisé en domotique l'entreprise Novelec réalise pour vous un habitât simple, fonctionnel et connecté",
       title: "Domotique",
+    },
+  },
+  {
+    name: "Pompe a Chaleur",
+    path: "/pompeachaleur",
+    icon: "HeatPumpOutline",
+    component: () => import("../views/PompePage.vue"),
+    meta: {
+      description:
+        "Spécialisé en domotique l'entreprise Novelec réalise pour vous un habitât simple, fonctionnel et connecté",
+      title: "Pompe a Chaleur",
     },
   },
   {

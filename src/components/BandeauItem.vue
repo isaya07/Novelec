@@ -1,6 +1,41 @@
 <script setup>
-defineProps({
-  image: null,
+import { ref } from "vue"
+// import imgSize from "@/utils/imgSize"
+const props = defineProps({
+  image: {
+    type: String,
+    default: "",
+  },
+})
+
+let imgLoad = ref({})
+
+let test = new Promise(function (resolve) {
+  let imgObj = null
+  const img = new Image()
+  img.onload = function () {
+    imgObj = { src: props.image, width: this.naturalWidth, height: this.naturalHeight }
+    resolve(imgObj)
+  }
+  console.log(props.image)
+  img.src = props.image
+})
+
+/* function imgSize(imgUrl) {
+  console.log(imgUrl)
+  let imgLoad = null
+  const img = new Image()
+  img.onload = function () {
+    imgLoad = { src: imgUrl, width: this.naturalWidth, height: this.naturalHeight }
+    console.log(imgLoad)
+    return imgLoad
+  }
+  img.src = imgUrl
+}*/
+
+test.then((value) => {
+  imgLoad.value = value
+  console.log(imgLoad)
 })
 </script>
 
@@ -9,7 +44,13 @@ defineProps({
     <div class="hero-carousel">
       <div class="slider">
         <div class="slider-item has-background">
-          <img class="is-background" :src="image" alt="Image bandeau" />
+          <img
+            class="is-background"
+            :src="imgLoad.src"
+            :max-height="imgLoad.height"
+            :width="imgLoad.width"
+            alt="Image bandeau"
+          />
         </div>
       </div>
     </div>

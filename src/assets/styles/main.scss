@@ -43,6 +43,11 @@
   }
 }
 
+.navbar-item,
+.navbar-link {
+  padding: 0.5rem 0.25rem;
+}
+
 @include desktop {
   body.has-navbar-fixed-top {
     padding-top: 6rem;
