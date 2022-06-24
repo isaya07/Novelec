@@ -33,12 +33,12 @@ function showResult(reponse) {
 
 <template>
   <div>
-    <BandeauCarousel />
     <NotifItem :type="notif.type" :visible="notif.show" @show="notif.show = !notif.show">
       {{ notif.message }}
     </NotifItem>
-    <ContentBox :title="title" :subtitle="subtitle" />
     <div class="container is-widescreen has-text-left">
+      <BandeauCarousel />
+      <ContentBox :title="title" :subtitle="subtitle" />
       <section class="section">
         <div class="content">
           <h3>Bienvenue sur le site de l'entreprise Novelec</h3>

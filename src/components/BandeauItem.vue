@@ -17,13 +17,11 @@ let test = new Promise(function (resolve) {
     imgObj = { src: props.image, width: this.naturalWidth, height: this.naturalHeight }
     resolve(imgObj)
   }
-  console.log(props.image)
   img.src = props.image
 })
 
 test.then((value) => {
   imgLoad.value = value
-  console.log(imgLoad)
 })
 </script>
 

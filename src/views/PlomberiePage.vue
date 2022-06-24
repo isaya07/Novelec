@@ -8,7 +8,7 @@ const subtitle = "L'entreprise Novelec vous accompagne dans tous vos travaux él
 </script>
 
 <template>
-  <div>
+  <div class="container is-widescreen has-text-left">
     <BandeauItem :image="Tableau" />
     <ContentBox :title="title" :subtitle="subtitle" />
   </div>

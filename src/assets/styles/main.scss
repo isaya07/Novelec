@@ -110,6 +110,18 @@
   }
 }
 
+@include tablet-only {
+  .hero-body {
+    padding: 9rem 3rem !important;
+  }
+}
+
+@include fullhd {
+  .hero-body {
+    padding: 14rem 3rem !important;
+  }
+}
+
 @include mobile {
   .img-text {
     display: block;
