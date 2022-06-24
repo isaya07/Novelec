@@ -21,18 +21,6 @@ let test = new Promise(function (resolve) {
   img.src = props.image
 })
 
-/* function imgSize(imgUrl) {
-  console.log(imgUrl)
-  let imgLoad = null
-  const img = new Image()
-  img.onload = function () {
-    imgLoad = { src: imgUrl, width: this.naturalWidth, height: this.naturalHeight }
-    console.log(imgLoad)
-    return imgLoad
-  }
-  img.src = imgUrl
-}*/
-
 test.then((value) => {
   imgLoad.value = value
   console.log(imgLoad)

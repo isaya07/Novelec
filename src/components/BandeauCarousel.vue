@@ -24,14 +24,6 @@ for (const imgurl of ImagesUrl) {
 }
 
 const imagesRef = ref([])
-//const images = [imgC1, imgC2, imgC3, imgC4]
-
-/*const images = [
-  "/assets/Bandeau/electrician.jpg",
-  "/assets/hager-domovea.jpg",
-  "/assets/Bandeau/office.jpg",
-  "/assets/light-bulb.jpg",
-]*/
 
 let interval = null
 let init = true
