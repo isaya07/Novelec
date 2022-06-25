@@ -1,7 +1,8 @@
 <script setup>
-defineEmits(["show"])
+import { ref, watch } from "vue"
+const emit = defineEmits(["show"])
 
-defineProps({
+const props = defineProps({
   visible: {
     type: Boolean,
     default: false,
@@ -10,14 +11,39 @@ defineProps({
     type: String,
     default: "",
   },
+  timeout: {
+    type: Number,
+    default: 10000,
+  },
 })
+
+let show = ref(false)
+let timeout = null
+
+watch(
+  () => props.visible,
+  (newValue) => {
+    if (newValue != show.value) {
+      show.value = newValue
+      if (show.value == true) {
+        timeout = setTimeout(function () {
+          emit("show", false)
+        }, props.timeout)
+      } else {
+        clearTimeout(timeout)
+      }
+    }
+  }
+)
 </script>
 
 <template>
-  <Transition>
-    <div v-if="visible" ref="notif" :class="['notification fixenot', type ? `is-${type}` : '']">
-      <button class="delete is-medium" @click="$emit('show', !visible)"></button>
-      <slot />
+  <Transition name="bounce">
+    <div v-if="show" class="fixenot">
+      <div ref="notif" :class="['container notification', type ? `is-${type}` : '']">
+        <button class="delete is-medium" @click="$emit('show', !visible)"></button>
+        <slot />
+      </div>
     </div>
   </Transition>
 </template>
@@ -26,18 +52,26 @@ defineProps({
 .fixenot {
   position: fixed;
   top: 100px;
+  left: 0;
   z-index: 999;
-  width: 80%;
-  margin: auto;
+  width: 100%;
 }
 
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s ease;
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
 }
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>

@@ -16,9 +16,17 @@ function generateRoute(menu = [], routes = []) {
 }
 
 const generatedRoute = generateRoute(Menu)
+generatedRoute.push({
+  name: "Dolibarr",
+  path: "/dolibarr",
+  beforeEnter() {
+    location.href = "http://192.168.1.52"
+  },
+})
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  linkActiveClass: "is-active",
   routes: generatedRoute,
   scrollBehavior() {
     return new Promise((resolve) => {

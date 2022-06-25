@@ -56,8 +56,8 @@ onMounted(() => {
     }
   })
 
-  if (touch.matches) {
-    isTouch()
+  if (nonTouch.matches) {
+    isDesk()
   }
 })
 router.beforeEach((to, from, next) => {
@@ -90,26 +90,25 @@ router.beforeEach((to, from, next) => {
       <router-link class="navbar-item" to="/">
         <img class="mr-2" :src="Logo" alt="Logo" width="160" />
       </router-link>
+      <div ref="telBut" class="navbar-item tel">
+        <button class="button is-danger is-rounded is-responsive">
+          <strong><a class="has-text-white" href="tel:+33686415953">06 86 41 59 53</a></strong>
+        </button>
+      </div>
     </div>
     <div id="navbarNovelec" ref="menu" class="navbar-menu">
       <div class="navbar-start">
         <template v-for="(item, idx) in menus" :key="idx">
           <router-link :to="item.path" class="navbar-item">
-            <span v-if="item.icon" class="icon is-nav-icon has-text-danger is-size-5 is-flex-grow-1">
+            <span v-if="item.icon" class="icon is-nav-icon has-text-danger is-size-4 is-size-3-widescreen">
               <IconItem class="is-align-self-center is-align-items-center" :icon="item.icon" />
             </span>
-            <span class="is-size-6">
+            <span class="is-size-6 is-size-5-widescreen">
               {{ item.name }}
             </span>
           </router-link>
         </template>
       </div>
-    </div>
-
-    <div ref="telBut" class="navbar-item tel">
-      <button class="button is-danger is-rounded is-responsive">
-        <strong><a class="has-text-white" href="tel:+33686415953">06 86 41 59 53</a></strong>
-      </button>
     </div>
   </nav>
 </template>
@@ -117,5 +116,6 @@ router.beforeEach((to, from, next) => {
 <style scoped>
 .tel {
   margin-left: auto;
+  margin-right: 1rem;
 }
 </style>
