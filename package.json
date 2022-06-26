@@ -12,6 +12,7 @@
     "@aacassandra/vue3-progressbar": "^1.0.3",
     "bulma": "^0.9.4",
     "vue": "^3.2.36",
+    "vue-gtag": "^2.0.1",
     "vue-recaptcha": "^2.0.2",
     "vue-router": "^4.0.15"
   },

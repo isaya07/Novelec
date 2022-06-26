@@ -1,5 +1,5 @@
 <script setup>
-import { defineAsyncComponent, ref } from "vue"
+import { defineAsyncComponent } from "vue"
 
 import BandeauCarousel from "@/components/BandeauCarousel.vue"
 import ContentBox from "../components/ContentBox.vue"
@@ -8,32 +8,14 @@ const AtoutItem = defineAsyncComponent(() => import("@/components/AtoutItem.vue"
 const RgeItem = defineAsyncComponent(() => import("@/components/RgeItem.vue"))
 const GoogleFrame = defineAsyncComponent(() => import("@/components/GoogleFrame.vue"))
 const ContactForm = defineAsyncComponent(() => import("@/components/ContactForm.vue"))
-const NotifItem = defineAsyncComponent(() => import("@/components/NotifItem.vue"))
-
-const notif = ref({ show: false, type: "", message: "" })
 
 const title = "Électricien Plombier Chauffagiste et Climaticien à Beaulieu (43)"
 const subtitle =
   "L'entreprise Novelec vous accompagne dans tous vos travaux d'électricité, de chauffage et de climatisation."
-
-function showResult(reponse) {
-  if (reponse.type == "succes") {
-    notif.value.type = "primary"
-    notif.value.show = true
-    notif.value.message = reponse.message
-  } else {
-    notif.value.type = "danger"
-    notif.value.show = true
-    notif.value.message = reponse.message
-  }
-}
 </script>
 
 <template>
   <div class="container is-widescreen has-text-left">
-    <NotifItem :type="notif.type" :visible="notif.show" @show="notif.show = !notif.show">
-      {{ notif.message }}
-    </NotifItem>
     <BandeauCarousel />
     <ContentBox :title="title" :subtitle="subtitle" />
     <section class="section">
@@ -75,7 +57,7 @@ function showResult(reponse) {
       <div class="columns is-desktop">
         <div class="column">
           <div class="box">
-            <ContactForm @result="showResult" />
+            <ContactForm />
           </div>
         </div>
         <div class="column">

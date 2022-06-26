@@ -97,7 +97,7 @@ router.beforeEach((to, from, next) => {
       </div>
     </div>
     <div id="navbarNovelec" ref="menu" class="navbar-menu">
-      <div class="navbar-start">
+      <div class="navbar-start is-justify-content-center">
         <template v-for="(item, idx) in menus" :key="idx">
           <router-link :to="item.path" class="navbar-item">
             <span v-if="item.icon" class="icon is-nav-icon has-text-danger is-size-4 is-size-3-widescreen">

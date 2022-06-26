@@ -1,4 +1,7 @@
 <template>
+  <NotifItem :type="notif.type" :visible="notif.show" @show="notif.show = !notif.show">
+    {{ notif.message }}
+  </NotifItem>
   <form novalidate @submit.prevent="onSubmit">
     <div class="field">
       <label class="label"
@@ -141,15 +144,6 @@
     </div>
     <div class="field">
       <div class="control">
-        <VueRecaptcha
-          ref="vueRecaptcha"
-          size="invisible"
-          :sitekey="site_key"
-          language="fr"
-          @verify="onVerify"
-          @expired="onExpired"
-        >
-        </VueRecaptcha>
         <p class="is-size-7">
           Ce site est protégé par reCAPTCHA, la
           <a href="https://policies.google.com/privacy">politique de confidentialité</a> et les
@@ -167,11 +161,42 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue"
-import { VueRecaptcha } from "vue-recaptcha"
+import { ref, watch, inject, defineAsyncComponent } from "vue"
+import useEventsBus from "@/utils/eventBus.js"
+const NotifItem = defineAsyncComponent(() => import("@/components/NotifItem.vue"))
 
-const emit = defineEmits(["result"])
-const site_key = "6LeEME0UAAAAAJKfpsqLI0iOTTYAkN9XMc_3FfLk"
+const notif = ref({ show: false, type: "", message: "" })
+let nom = ref("")
+let email = ref("")
+let tel = ref("")
+let sujet = ref("")
+let message = ref("")
+let check = ref("")
+let errors = ref({})
+let loading = ref(false)
+const vueRecaptcha = inject("VueRecaptcha")
+
+const { bus } = useEventsBus()
+watch(
+  () => bus.value.get("recaptchaVerify"),
+  (response) => {
+    // destruct the parameters
+    const [recaptchaVerify] = response ?? []
+    onVerify(recaptchaVerify)
+  }
+)
+
+function showResult(reponse) {
+  if (reponse.success == "true") {
+    notif.value.type = "primary"
+    notif.value.show = true
+    notif.value.message = reponse.message
+  } else {
+    notif.value.type = "danger"
+    notif.value.show = true
+    notif.value.message = reponse.message
+  }
+}
 
 function httpPost(formData, callback) {
   var xmlHttp = new XMLHttpRequest()
@@ -195,16 +220,6 @@ function debounce(fn, delay) {
     }, delay)
   }
 }
-
-let nom = ref("")
-let email = ref("")
-let tel = ref("")
-let sujet = ref("")
-let message = ref("")
-let check = ref("")
-let errors = ref({})
-let loading = ref(false)
-const vueRecaptcha = ref(null)
 
 function hasError(key) {
   if (key in errors.value && errors.value[key] !== null) return true
@@ -267,39 +282,37 @@ function validForm() {
   validMessage(message.value)
   validCheck()
 }
+
 async function onSubmit() {
-  loading = true
+  loading.value = true
   let valid = true
   validForm()
   for (let error in errors.value) {
     if (errors.value[error] !== null) valid = false
   }
   if (valid) {
+    console.log(vueRecaptcha.value)
     vueRecaptcha.value.execute()
   } else {
-    emit("result", {
+    showResult({
       success: false,
       message: "Votre formulaire de contact comporte des erreurs ou des données manquantes, merci de les corriger",
     })
-    loading = false
+    loading.value = false
   }
 }
-function onVerify(response) {
-  loading = true
-  console.log("Verify: " + response)
+function onVerify() {
   const data = {}
   data.nom = nom.value
   data.email = email.value
   data.message = message.value
   if (tel.value) data.tel = tel.value
   if (sujet.value) data.sujet = sujet.value
+  //TODO validate response
   httpPost(data, (reponse) => {
-    emit("result", JSON.parse(reponse))
-    loading = false
+    showResult(JSON.parse(reponse))
+    loading.value = false
   })
-}
-function onExpired() {
-  console.log("Expired")
 }
 
 watch(nom, (newNom) => {
@@ -321,9 +334,3 @@ watch(check, (newCheck) => {
   debounce(validCheck(newCheck), 1000)
 })
 </script>
-
-<style>
-.grecaptcha-badge {
-  visibility: hidden;
-}
-</style>

@@ -70,6 +70,9 @@
       }
     }
   }
+  .navbar-start {
+    width: 100% !important;
+  }
 }
 
 @include tablet {
