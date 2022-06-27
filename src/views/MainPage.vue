@@ -11,7 +11,7 @@ const ContactForm = defineAsyncComponent(() => import("@/components/ContactForm.
 
 const title = "Électricien Plombier Chauffagiste et Climaticien à Beaulieu (43)"
 const subtitle =
-  "L'entreprise Novelec vous accompagne dans tous vos travaux d'électricité, de chauffage et de climatisation."
+  "Nous vous accompagnons dans tous vos travaux d'électricité, de plomberie, de chauffage et de climatisation."
 </script>
 
 <template>

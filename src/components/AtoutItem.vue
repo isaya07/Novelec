@@ -2,40 +2,38 @@
 <template>
   <div class="box">
     <div class="title is-2 has-text-centered is-size-4-mobile">Nos Atouts</div>
-    <div class="columns is-mobile has-text-centered">
+    <div class="columns has-text-centered">
       <div class="column is-one-quarter">
-        <div class="circle has-text-white">
-          <mdi-bullseye-arrow font-size="2em" />
+        <div class="circle has-text-white is-size-3">
+          <mdi-bullseye-arrow />
         </div>
-        <div class="mt-1 has-text-weight-bold is-size-5 is-size-7-mobile">Savoir faire</div>
+        <div class="mt-1 has-text-weight-bold is-size-5">Savoir faire</div>
         <div class="divider"></div>
-        <div class="is-size-7-mobile">
-          Nous disposons d'une compétence large en matière d'électricité, de plomberie et chauffage.
-        </div>
+        <div>Nous disposons d'une compétence large en matière d'électricité, de plomberie et chauffage.</div>
       </div>
       <div class="column is-one-quarter">
-        <div class="circle has-text-white">
-          <mdi-account-supervisor-circle-outline font-size="2em" />
+        <div class="circle has-text-white is-size-3">
+          <mdi-account-supervisor-circle-outline />
         </div>
-        <div class="mt-1 has-text-weight-bold is-size-5 is-size-7-mobile">Expérience</div>
+        <div class="mt-1 has-text-weight-bold is-size-5">Expérience</div>
         <div class="divider"></div>
-        <div class="is-size-7-mobile">Nous intervenons sur tous types de bâtiments depuis plus de neuf ans.</div>
+        <div>Nous intervenons sur tous types de bâtiments depuis plus de neuf ans.</div>
       </div>
       <div class="column is-one-quarter">
-        <div class="circle has-text-white">
-          <mdi-calendar-clock-outline font-size="2em" />
+        <div class="circle has-text-white is-size-3">
+          <mdi-calendar-clock-outline />
         </div>
-        <div class="mt-1 has-text-weight-bold is-size-5 is-size-7-mobile">Respect des délais</div>
+        <div class="mt-1 has-text-weight-bold is-size-5">Respect des délais</div>
         <div class="divider"></div>
-        <div class="is-size-7-mobile">NNous vous garantissons un travail soigné, réalisé à temps.</div>
+        <div>NNous vous garantissons un travail soigné, réalisé à temps.</div>
       </div>
       <div class="column is-one-quarter">
-        <div class="circle has-text-white">
-          <mdi-timer-outline font-size="2em" />
+        <div class="circle has-text-white is-size-3">
+          <mdi-timer-outline />
         </div>
-        <div class="mt-1 has-text-weight-bold is-size-5 is-size-7-mobile">Disponibilité</div>
+        <div class="mt-1 has-text-weight-bold is-size-5">Disponibilité</div>
         <div class="divider"></div>
-        <div class="is-size-7-mobile">Nous intervenons dans tout le département de la Haute-Loire.</div>
+        <div>Nous intervenons dans tout le département de la Haute-Loire.</div>
       </div>
     </div>
   </div>

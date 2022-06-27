@@ -40,5 +40,13 @@ const subtitle = "L'entreprise Novelec vous accompagne dans tous vos travaux él
         </p>
       </div>
     </section>
+    <div class="is-flex is-justify-content-center mb-6">
+      <router-link to="/contact" class="button is-danger is-outlined">
+        <span class="icon is-medium is-nav-icon has-text-danger is-size-5">
+          <IconItem :icon="'EmailOutline'" />
+        </span>
+        <span class="is-size-6"> Nous contacter </span>
+      </router-link>
+    </div>
   </div>
 </template>

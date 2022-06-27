@@ -1,12 +1,21 @@
+<script setup>
+import { defineAsyncComponent } from "vue"
+import ContentBox from "../components/ContentBox.vue"
+const ContactForm = defineAsyncComponent(() => import("@/components/ContactForm.vue"))
+const GoogleFrame = defineAsyncComponent(() => import("@/components/GoogleFrame.vue"))
+
+const title = "Nous Contacter"
+const subtitle = "N'hésitez pas a nous contacté pour la réalisation de vos projets"
+</script>
+
 <template>
   <div class="container is-widescreen has-text-left">
+    <br />
+    <ContentBox :title="title" :subtitle="subtitle" />
     <section>
       <div class="content">
-        <h3>Contactez nous...</h3>
-        <p class="texte">
-          Pour toutes demandes de renseignements, n'hésitez pas à nous contacter, soit par ce formulaire, soit
-          directement avec les coordonnées que vous trouverez en bas de page.
-        </p>
+        <h3>Formulaire de contact :</h3>
+        <p class="texte">Veuillez remplir ce formulaire ou utilisé les coordoné en bas de page. Merci.</p>
         <div class="columns is-desktop">
           <div class="column">
             <div class="box">
@@ -22,10 +31,3 @@
     </section>
   </div>
 </template>
-
-<script setup>
-import { defineAsyncComponent } from "vue"
-
-const ContactForm = defineAsyncComponent(() => import("@/components/ContactForm.vue"))
-const GoogleFrame = defineAsyncComponent(() => import("@/components/GoogleFrame.vue"))
-</script>

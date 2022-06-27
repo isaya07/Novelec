@@ -19,7 +19,6 @@ onBeforeMount(() => {
 })
 
 const vueRecaptcha = ref(VueRecaptcha)
-console.log(vueRecaptcha)
 provide("VueRecaptcha", vueRecaptcha)
 
 router.beforeEach((to, from, next) => {
@@ -46,7 +45,7 @@ function onVerify(response) {
   <header>
     <NavBar />
   </header>
-  <main>
+  <main id="main-container">
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
         <component :is="Component" />

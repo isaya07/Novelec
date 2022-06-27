@@ -13,59 +13,84 @@ const subtitle = "L'entreprise Novelec vous accompagne dans tous vos travaux él
     <BandeauItem :image="Pompe" />
     <ContentBox :title="title" :subtitle="subtitle" />
     <section class="section">
-      <h2>Chaudières gaz, pompes à chaleur, des solutions de chauffage sur mesure</h2>
-      <p>
-        La polyvalence de nos équipes est l’une de nos fiertés. Riches des acquis de nos collaborateurs, nous sommes en
-        mesure d’<strong>intervenir avec efficacité dans le domaine du chauffage</strong>. Qu’il s’agisse de
-        <strong>rénover une installation existante</strong> ou d’<strong>équiper une construction neuve</strong>, nous
-        sommes sur tous les fronts.
-      </p>
-      <p>
-        Vous résidez à Rennes, Saint-Malo ou Dinan&nbsp;?<strong>
-          Vous recherchez un chauffagiste compétent&nbsp;</strong
-        >? Depuis notre site de Combourg,
-        <strong>nos collaborateurs prennent en charge les demandes suivantes</strong>&nbsp;:
-      </p>
-      <ul>
-        <li>
-          <strong>Installation de chaudière gaz à condensation</strong>&nbsp;: en remplacement d’un équipement
-          défectueux ou sur un nouveau réseau&nbsp;;
-        </li>
-        <li>
-          <strong>Mise en place de pompe à chaleur air-eau</strong>&nbsp;: une solution parfaite pour remplacer une
-          ancienne chaudière (fioul ou gaz) ou pour <strong>créer un système de chauffage économique</strong>&nbsp;;
-        </li>
-        <li><strong>Pose de pompe à chaleur air-air</strong> / clim réversible&nbsp;;</li>
-        <li><strong>Installation de chaudière électrique</strong> (si demandes spécifiques)&nbsp;;</li>
-        <li><strong>Pose de plancher chauffant</strong>&nbsp;;</li>
-        <li>
-          <strong>Création de circuit de chauffage complet</strong>&nbsp;: depuis la mise en place des radiateurs
-          jusqu’à la pose de la chaudière&nbsp;;
-        </li>
-        <li>
-          <strong>Désembouage de circuit de chauffage&nbsp;</strong>: consiste à retirer tous les dépôts qui se forment
-          au fil des années dans votre réseau hydraulique ou votre plancher chauffant. Votre installation retrouve une
-          capacité de chauffe optimale&nbsp;;
-        </li>
-        <li>
-          <strong>Mise en service de PAC&nbsp;</strong>: disposant d’un agrément SOCOTEC, nous sommes habilités à la
-          mise en service de votre pompe à chaleur (Atlantic, Mitsubishi Electric, etc.)
-        </li>
-      </ul>
-      <p>
-        <strong>PC Elec est certifiée RGE Qualibat et QualiPAC</strong>. Du fait de ces labels, nos prestations en lien
-        avec l’amélioration des performances énergétiques de votre logement peuvent vous rendre éligibles à des<strong>
-          aides financières</strong
-        >. Primes CEE, Éco-PTZ, MaPrimeRénov’… certains de ces dispositifs sont très avantageux pour<strong>
-          financer la pose d’une nouvelle chaudière à condensation ou d’une PAC</strong
-        >.
-      </p>
-      <p>
-        Contactez-nous pour <strong>discuter de votre projet</strong>. Nous vous ferons parvenir une<strong>
-          proposition tarifaire personnalisée et sans engagement</strong
-        >.
-      </p>
+      <div class="content">
+        <h3>Pompes à chaleur Air/Eau, des solutions de chauffage sur mesure</h3>
+        <p>
+          La polyvalence de nos équipes est l’une de nos fiertés. Riches des acquis de nos collaborateurs, nous sommes
+          en mesure d’<strong>intervenir avec efficacité dans le domaine du chauffage</strong>. Qu’il s’agisse de
+          <strong>rénover une installation existante</strong> ou d’<strong>équiper une construction neuve</strong>, nous
+          sommes sur tous les fronts.
+        </p>
+        <p>
+          Vous résidez sur les bassins du Puy-en-Velay, de l'emblavez ou d'Yssingeaux.
+          <strong>Vous recherchez un chauffagiste compétent&nbsp;</strong>? Nous prennons en charge les demandes
+          suivantes&nbsp;:
+        </p>
+        <ul>
+          <li>
+            <strong>Mise en place de pompe à chaleur air-eau</strong>&nbsp;: une solution parfaite pour remplacer une
+            ancienne chaudière (fioul ou gaz) ou pour <strong>créer un système de chauffage économique</strong>
+          </li>
+          <li><strong>Installation de chaudière électrique</strong> (si demandes spécifiques)</li>
+          <li><strong>Pose de plancher chauffant</strong></li>
+          <li>
+            <strong>Création de circuit de chauffage complet</strong>&nbsp;: depuis la mise en place des radiateurs
+            jusqu’à la pose de la chaudière
+          </li>
+          <li>
+            <strong>Désembouage de circuit de chauffage&nbsp;</strong>: consiste à retirer tous les dépôts qui se
+            forment au fil des années dans votre réseau hydraulique ou votre plancher chauffant. Votre installation
+            retrouve une capacité de chauffe optimale
+          </li>
+        </ul>
+        <p>
+          <strong>Nous somme certifiée RGE et QualiPAC</strong>. Du fait de ces labels, nos prestations en lien avec
+          l’amélioration des performances énergétiques de votre logement peuvent vous rendre éligibles à des<strong>
+            aides financières</strong
+          >. Primes CEE, Éco-PTZ, MaPrimeRénov’… certains de ces dispositifs sont très avantageux pour<strong>
+            financer la pose d’une PAC</strong
+          >.
+        </p>
+        <p>
+          Contactez-nous pour <strong>discuter de votre projet</strong>. Nous vous ferons parvenir une<strong>
+            proposition tarifaire personnalisée et sans engagement</strong
+          >.
+        </p>
+      </div>
     </section>
     <BandeauItem :image="Clim" />
+    <section class="section">
+      <div class="content">
+        <h3>Pompes à chaleur Air/Air, climatisation réversible</h3>
+        <p>
+          Notre <strong>savoir-faire</strong> de haute technicité nous permet d’intervenir dans en résidentiel comme en
+          tertiaire. Nos équipes assurent la pose et l’entretien de vos équipements.
+        </p>
+        <p>
+          Pendant son fonctionnement la climatisation absorbe les calories contenues dans l’air, c’est un échange
+          thermique entre l’unité intérieure et l’unité extérieure, pour les déplacer soit vers l’intérieur en mode
+          chauffage, soit vers l’extérieur en mode rafraîchissement. En mode réversible la climatisation consomme 1Kwh
+          électricité et restitue 3Kwh de chauffage, vous réalisez ainsi
+          <strong>jusqu'à 70% d'économie</strong> d'énergie par rapport à un chauffage électrique.
+        </p>
+        <p>Nos différents systèmes de climatisation :</p>
+        <ul>
+          <li><strong>climatiseur monobloc, split ou multisplit</strong></li>
+          <li><strong>Système gainable</strong></li>
+          <li><strong>Plafonnier et DRV/VRV</strong></li>
+        </ul>
+        <p>
+          Tous les projets débutent par une étude personnalisée pour dimensionner l’installation à son environnement.
+        </p>
+      </div>
+    </section>
+    <div class="is-flex is-justify-content-center mb-6">
+      <router-link to="/contact" class="button is-danger is-outlined">
+        <span class="icon is-medium is-nav-icon has-text-danger is-size-5">
+          <IconItem :icon="'EmailOutline'" />
+        </span>
+        <span class="is-size-6"> Nous contacter </span>
+      </router-link>
+    </div>
   </div>
 </template>
