@@ -1,5 +1,5 @@
 <script setup>
-import Domo from "../assets/domotique.jpg"
+import Domo from "../assets/Bandeau/domotique.jpg"
 // import Depannage from "../assets/dépannage-2.jpg"
 import BandeauItem from "../components/BandeauItem.vue"
 import ContentBox from "../components/ContentBox.vue"

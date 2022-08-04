@@ -27,6 +27,7 @@ const subtitle = "N'hésitez pas a nous contacté pour la réalisation de vos pr
             <GoogleFrame />
           </div>
         </div>
+        <br />
       </div>
     </section>
   </div>

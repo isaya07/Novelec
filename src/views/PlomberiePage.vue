@@ -1,5 +1,5 @@
 <script setup>
-import Tableau from "../assets/depannage-Plomberie-reparation-Installation.jpg"
+import Tableau from "../assets/Bandeau/Plomberie.jpg"
 import BandeauItem from "../components/BandeauItem.vue"
 import ContentBox from "../components/ContentBox.vue"
 

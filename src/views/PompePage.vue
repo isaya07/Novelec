@@ -1,11 +1,11 @@
 <script setup>
-import Pompe from "../assets/Installation-Climatisation-reparation.jpg"
-import Clim from "../assets/clim.png"
+import Pompe from "../assets/Bandeau/Pompe.jpg"
+import Clim from "../assets/Bandeau/Climatisation.png"
 import BandeauItem from "../components/BandeauItem.vue"
 import ContentBox from "../components/ContentBox.vue"
 
-const title = "Electricité général et tertiaire, dépannage. Neuf et rénovation"
-const subtitle = "L'entreprise Novelec vous accompagne dans tous vos travaux électrique..."
+const title = "Pompe a Chaleur, climatisation réversible"
+const subtitle = "Nous vous accompagnons dans vos travaux d'amelioration énergétique"
 </script>
 
 <template>
