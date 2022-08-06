@@ -1,6 +1,6 @@
 <script setup>
-import Pompe from "../assets/Bandeau/Pompe.jpg"
-import Clim from "../assets/Bandeau/Climatisation.png"
+import Pompe from "../assets/Bandeau/Pompe.jpg?&webp"
+import Clim from "../assets/Bandeau/Climatisation.png?&webp"
 import BandeauItem from "../components/BandeauItem.vue"
 import ContentBox from "../components/ContentBox.vue"
 

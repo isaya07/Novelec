@@ -2,7 +2,7 @@
 import { onMounted, ref } from "vue"
 import router from "@/router"
 import { Menu } from "@/router/menu"
-import Logo from "@/assets/logo.png?webp"
+import Logo from "@/assets/logo.png?w=160&webp"
 import IconItem from "@/components/IconItem.vue"
 
 const menus = Menu

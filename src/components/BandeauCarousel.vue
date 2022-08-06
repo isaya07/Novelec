@@ -1,16 +1,12 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue"
-/*import imgC1 from "../assets/Bandeau/electrician.jpg?webp&quality=80"
-import imgC2 from "../assets/Bandeau/hager-domovea.jpg?webp&quality=80"
-import imgC3 from "../assets/Bandeau/office.jpg?webp&quality=80"
-import imgC4 from "../assets/Bandeau/light-bulb.jpg?webp&quality=80"*/
+/*import imgC1 from "../assets/Bandeau/electrician.jpg?webp&quality=80"*/
+import imgC1 from "../assets/Bandeau/electrician-2.jpg?&webp"
+import imgC2 from "../assets/Bandeau/hager-domovea-2.jpg?&webp"
+import imgC3 from "../assets/Bandeau/office-2.jpg?&webp"
+import imgC4 from "../assets/Bandeau/light-bulb-2.jpg?&webp"
 
-const ImagesUrl = [
-  new URL("../assets/Bandeau/electrician-2.jpg", import.meta.url).href,
-  new URL("../assets/Bandeau/hager-domovea-2.jpg", import.meta.url).href,
-  new URL("../assets/Bandeau/office-2.jpg", import.meta.url).href,
-  new URL("../assets/Bandeau/light-bulb-2.jpg", import.meta.url).href,
-]
+const ImagesUrl = [imgC1, imgC2, imgC3, imgC4]
 
 const Images = ref([])
 

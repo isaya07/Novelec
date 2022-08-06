@@ -6,7 +6,7 @@ const url =
 
 <template>
   <div class="map-responsive">
-    <iframe style="border: 0" loading="lazy" allowfullscreen :src="url"></iframe>
+    <iframe title="Novelec Position" style="border: 0" loading="lazy" allowfullscreen :src="url"></iframe>
   </div>
 </template>
 

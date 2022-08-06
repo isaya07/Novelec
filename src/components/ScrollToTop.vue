@@ -1,8 +1,6 @@
 <template>
-  <a v-show="visible" class="bottom-right" @click="scrollTop">
-    <a>
-      <mdi-arrow-up-bold-circle-outline style="font-size: 2.5em" />
-    </a>
+  <a v-show="visible" href="#" class="bottom-right" @click="scrollTop">
+    <mdi-arrow-up-bold-circle-outline style="font-size: 2.5em" />
   </a>
 </template>
 
