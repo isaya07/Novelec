@@ -24,6 +24,12 @@ generatedRoute.push({
   },
 })
 
+generatedRoute.push({
+  name: "not found",
+  path: "/:pathMatch(.*)*",
+  component: () => import("../views/NotFound.vue"),
+})
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   linkActiveClass: "is-active",

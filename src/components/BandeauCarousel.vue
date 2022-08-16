@@ -1,10 +1,10 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue"
 /*import imgC1 from "../assets/Bandeau/electrician.jpg?webp&quality=80"*/
-import imgC1 from "../assets/Bandeau/electrician-2.jpg?&webp"
-import imgC2 from "../assets/Bandeau/hager-domovea-2.jpg?&webp"
-import imgC3 from "../assets/Bandeau/office-2.jpg?&webp"
-import imgC4 from "../assets/Bandeau/light-bulb-2.jpg?&webp"
+import imgC1 from "../assets/Bandeau/hager-domovea-2.jpg?&webp"
+import imgC2 from "../assets/Bandeau/Plomberie.jpg?&webp"
+import imgC3 from "../assets/Bandeau/domotique.jpg?&webp"
+import imgC4 from "../assets/Bandeau/Pompe.jpg?&webp"
 
 const ImagesUrl = [imgC1, imgC2, imgC3, imgC4]
 

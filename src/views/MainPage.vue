@@ -23,8 +23,9 @@ const subtitle =
         <h3>Bienvenue sur le site de l'entreprise Novelec</h3>
         <p class="texte">
           Novelec est une entreprise spécialisée dans les métiers technique du bâtiment. Nous intervenons sur tous types
-          de bâtiments résidentiel ou tertiaire. Installation classique, mise au norme, en sécurité, tableau électrique,
-          domotique, nous vous accompagnons dans tous vos projets de rénovation, construction neuve, agrandissement...
+          de bâtiments résidentiel ou tertiaire. Installation électrique classique, domotisé, plomberie, chauffage et
+          climatisation, nous vous accompagnons dans tous vos projets de rénovation, construction neuve,
+          agrandissement...
         </p>
         <p class="texte">Nous réalisons pour vous :</p>
         <ul>
@@ -53,7 +54,7 @@ const subtitle =
     <section class="section">
       <RgeItem />
     </section>
-    <section>
+    <section class="pb-3">
       <div class="columns is-desktop">
         <div class="column">
           <div class="box">

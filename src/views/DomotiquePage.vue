@@ -3,9 +3,9 @@ import Domo from "../assets/Bandeau/domotique.jpg?&webp"
 // import Depannage from "../assets/dépannage-2.jpg"
 import BandeauItem from "../components/BandeauItem.vue"
 import ContentBox from "../components/ContentBox.vue"
-
-const title = "Electricité général et tertiaire, dépannage. Neuf et rénovation"
-const subtitle = "L'entreprise Novelec vous accompagne dans tous vos travaux électrique..."
+import DomotiqueItem from "../components/DomotiqueItem.vue"
+const title = "Domotique, Immotique, Gestion technique du batiment"
+const subtitle = "L'entreprise Novelec vous aide a rendre votre habitat, bureau plus simple, plus comfortable."
 </script>
 
 <template>
@@ -21,12 +21,7 @@ const subtitle = "L'entreprise Novelec vous accompagne dans tous vos travaux él
           <strong>simplifier</strong> la vie nous vous offrons une large palette de solutions afin de
           <strong>contrôler</strong> votre habitat.
         </p>
-        <ul>
-          <li><strong>Gestion des ouvrants</strong></li>
-          <li><strong>Gestion de l'éclairage</strong></li>
-          <li><strong>Gestion de scénarios</strong></li>
-          <li><strong>Gestion de l'énergie</strong></li>
-        </ul>
+        <DomotiqueItem />
         <p class="texte">
           Chaque action pourra être contrôlée de manière automatique (à horaire fixe, en fonction de la luminosité...),
           ou par modules de commande (télécommandes, écrans tactiles, ordinateur…). Tout ceci nous permet

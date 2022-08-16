@@ -60,7 +60,7 @@ onMounted(() => {
       <div clas="column">
         <h1 class="title is-size-5-mobile">{{ title }}</h1>
         <transition @after-leave="onAfterLeave" @after-enter="onAfterEnter">
-          <h4 v-if="showSubtitle" class="subtitle is-size-6-mobile">{{ subtitle }}</h4>
+          <h2 v-if="showSubtitle" class="subtitle is-size-6-mobile">{{ subtitle }}</h2>
         </transition>
       </div>
     </div>
