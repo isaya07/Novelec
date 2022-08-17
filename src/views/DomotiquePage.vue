@@ -1,5 +1,5 @@
 <script setup>
-import Domo from "../assets/Bandeau/domotique.jpg?&webp"
+import Domo from "../assets/Bandeau/domotique.jpg?width=400;800;1100&webp"
 // import Depannage from "../assets/dépannage-2.jpg"
 import BandeauItem from "../components/BandeauItem.vue"
 import ContentBox from "../components/ContentBox.vue"
@@ -16,17 +16,20 @@ const subtitle = "L'entreprise Novelec vous aide a rendre votre habitat, bureau 
       <div class="content">
         <h3>Domotique</h3>
         <p class="texte">
-          Vous avez envie <strong>d'automatiser</strong> certaines tâches récurrentes, que votre maison
-          <strong>interagisse</strong> avec vous, avec les conditions extérieures. Pour vous
+          <span class="tabulation"></span>Vous avez envie <strong>d'automatiser</strong> certaines tâches récurrentes,
+          que votre maison <strong>interagisse</strong> avec vous, avec les conditions extérieures. Pour vous
           <strong>simplifier</strong> la vie nous vous offrons une large palette de solutions afin de
           <strong>contrôler</strong> votre habitat.
         </p>
         <DomotiqueItem />
         <p class="texte">
-          Chaque action pourra être contrôlée de manière automatique (à horaire fixe, en fonction de la luminosité...),
-          ou par modules de commande (télécommandes, écrans tactiles, ordinateur…). Tout ceci nous permet
-          <strong>d'améliorer</strong> la vie au quotidien en facilitant certaines tâches, et en intégrant les
-          <strong>technologies</strong> d’aujourd’hui directement au centre de la maison.
+          <span class="tabulation"></span>Chaque action pourra être contrôlée de manière automatique (à horaire fixe, en
+          fonction de la luminosité...), ou par modules de commande (télécommandes, écrans tactiles, ordinateur…).
+        </p>
+        <p class="texte">
+          <span class="tabulation"></span>Tout ceci nous permet <strong>d'améliorer</strong> la vie au quotidien en
+          facilitant certaines tâches, et en intégrant les <strong>technologies</strong> d’aujourd’hui directement au
+          centre de la maison.
         </p>
         <p class="texte">
           Chaque installation est une

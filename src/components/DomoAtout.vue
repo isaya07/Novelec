@@ -12,8 +12,8 @@ defineProps({
 </script>
 <template>
   <div class="content">
-    <div class="columns is-vcentered has-text-centered">
-      <div class="column is-one-quarter">
+    <div class="columns is-vcentered">
+      <div class="column is-one-quarter has-text-centered">
         <div class="circle has-text-white is-size-3">
           <slot></slot>
         </div>

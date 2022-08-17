@@ -5,8 +5,8 @@ import BandeauItem from "../components/BandeauItem.vue"
 import IconItem from "../components/IconItem.vue"
 import ContentBox from "../components/ContentBox.vue"
 
-import Tableau from "../assets/Bandeau/tableau.jpg?&webp"
-import Depannage from "../assets/Bandeau/dépannage-2.jpg?&webp"
+import Tableau from "../assets/Bandeau/tableau.jpg?width=400;800;1100&webp"
+import Depannage from "../assets/Bandeau/dépannage-2.jpg?width=400;800;1100&webp"
 
 const title = "Electricité général et tertiaire, dépannage. Neuf et rénovation"
 const subtitle = "L'entreprise Novelec vous accompagne dans tous vos travaux électrique..."

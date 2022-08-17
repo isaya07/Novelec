@@ -2,7 +2,7 @@
 import { onMounted, ref } from "vue"
 import router from "@/router"
 import { Menu } from "@/router/menu"
-import Logo from "@/assets/logo.png?w=160&webp"
+import Logo from "@/assets/logo.png?w=320&webp"
 import IconItem from "@/components/IconItem.vue"
 
 const menus = Menu
@@ -87,7 +87,7 @@ router.beforeEach((to, from, next) => {
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </div>
-      <router-link class="navbar-item" to="/">
+      <router-link class="navbar-item logo-item" to="/">
         <img class="mr-2" :src="Logo" alt="Logo" width="160" />
       </router-link>
       <div ref="telBut" class="navbar-item tel">
@@ -117,5 +117,8 @@ router.beforeEach((to, from, next) => {
 .tel {
   margin-left: auto;
   margin-right: 1rem;
+}
+.logo-item img {
+  max-height: 3rem !important;
 }
 </style>

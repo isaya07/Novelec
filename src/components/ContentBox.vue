@@ -14,13 +14,18 @@ defineProps({
 let showSubtitle = ref(true)
 
 function observe(entries) {
-  if (entries[0].intersectionRatio <= 1 && entries[0].isIntersecting) {
-    showSubtitle.value = true
-    setTimeout(() => {}, 500)
-  } else {
-    showSubtitle.value = false
-    setTimeout(() => {}, 500)
-  }
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // if (entry.intersectionRatio <= 1 && entry.isIntersecting) {
+      if (entry.intersectionRatio > 0.9) {
+        showSubtitle.value = true
+        setTimeout(() => {}, 500)
+      }
+    } else {
+      showSubtitle.value = false
+      setTimeout(() => {}, 500)
+    }
+  })
 }
 
 function onAfterEnter() {
@@ -40,7 +45,8 @@ function onAfterLeave() {
 const options = {
   // root: document.querySelector("#main-container"),
   rootMargin: "0px 0px 64px 0px",
-  threshold: [0, 1],
+  // threshold: [0, 1],
+  threshold: [0.9],
 }
 onMounted(() => {
   var observer = new IntersectionObserver(observe, options)
@@ -49,7 +55,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="observe"></div>
   <div id="title-box" class="box is-flex is-justify-content-center is-on-top">
     <div class="columns is-mobile is-centered is-vcentered">
       <div clas="column is-narrow">
@@ -65,6 +70,7 @@ onMounted(() => {
       </div>
     </div>
   </div>
+  <div id="observe"></div>
 </template>
 
 <style lang="scss" scoped>

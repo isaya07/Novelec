@@ -1,10 +1,10 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue"
 /*import imgC1 from "../assets/Bandeau/electrician.jpg?webp&quality=80"*/
-import imgC1 from "../assets/Bandeau/hager-domovea-2.jpg?&webp"
-import imgC2 from "../assets/Bandeau/Plomberie.jpg?&webp"
-import imgC3 from "../assets/Bandeau/domotique.jpg?&webp"
-import imgC4 from "../assets/Bandeau/Pompe.jpg?&webp"
+import imgC1 from "../assets/Bandeau/hager-domovea-2.jpg?width=400;800;1100&webp"
+import imgC2 from "../assets/Bandeau/Plomberie.jpg?width=400;800;1100&webp"
+import imgC3 from "../assets/Bandeau/domotique.jpg?width=400;800;1100&webp"
+import imgC4 from "../assets/Bandeau/Pompe.jpg?width=400;800;1100&webp"
 
 const ImagesUrl = [imgC1, imgC2, imgC3, imgC4]
 
@@ -13,10 +13,16 @@ const Images = ref([])
 for (const imgurl of ImagesUrl) {
   const img = new Image()
   img.onload = function () {
-    const newImg = { src: imgurl, width: this.naturalWidth, height: this.naturalHeight }
+    const newImg = { src: this.src, width: this.naturalWidth, height: this.naturalHeight, srcset: this.srcset }
     Images.value.push(newImg)
   }
-  img.src = imgurl
+  if (Array.isArray(imgurl)) {
+    img.src = imgurl[0]
+    img.srcset = imgurl[1] + " 800w, " + imgurl[2] + " 1024w"
+  } else {
+    img.src = imgurl
+    img.srcset = ""
+  }
 }
 
 const imagesRef = ref([])
@@ -80,6 +86,7 @@ function setImages() {
               :src="image.src"
               :width="image.width"
               :height="image.height"
+              :srcset="image.srcset"
               alt="Image Slide"
             />
             <img
@@ -89,6 +96,7 @@ function setImages() {
               :width="image.width"
               :height="image.height"
               :data-url="image.src"
+              :srcset="image.srcset"
               alt="Image Slide"
             />
           </div>

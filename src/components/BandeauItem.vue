@@ -3,8 +3,8 @@ import { ref } from "vue"
 // import imgSize from "@/utils/imgSize"
 const props = defineProps({
   image: {
-    type: String,
-    default: "",
+    type: Array,
+    default: null,
   },
 })
 
@@ -14,10 +14,16 @@ let test = new Promise(function (resolve) {
   let imgObj = null
   const img = new Image()
   img.onload = function () {
-    imgObj = { src: props.image, width: this.naturalWidth, height: this.naturalHeight }
+    imgObj = { src: img.src, width: this.naturalWidth, height: this.naturalHeight, srcset: img.srcset }
     resolve(imgObj)
   }
-  img.src = props.image
+  if (Array.isArray(props.image)) {
+    img.src = props.image[0]
+    img.srcset = props.image[1] + " 800w, " + props.image[2] + " 1024w"
+  } else {
+    img.src = props.image
+    img.srcset = ""
+  }
 })
 
 test.then((value) => {
@@ -35,6 +41,7 @@ test.then((value) => {
             :src="imgLoad.src"
             :max-height="imgLoad.height"
             :width="imgLoad.width"
+            :srcset="imgLoad.srcset"
             alt="Image bandeau"
           />
         </div>

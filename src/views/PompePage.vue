@@ -1,6 +1,6 @@
 <script setup>
-import Pompe from "../assets/Bandeau/Pompe.jpg?&webp"
-import Clim from "../assets/Bandeau/Climatisation.png?&webp"
+import Pompes from "../assets/Bandeau/Pompe.jpg?width=400;800;1100&webp"
+import Clims from "../assets/Bandeau/Climatisation.png?width=400;800;1100&webp"
 import BandeauItem from "../components/BandeauItem.vue"
 import ContentBox from "../components/ContentBox.vue"
 
@@ -10,20 +10,20 @@ const subtitle = "Nous vous accompagnons dans vos travaux d'amelioration énerg�
 
 <template>
   <div class="container is-widescreen has-text-left">
-    <BandeauItem :image="Pompe" />
+    <BandeauItem :image="Pompes" />
     <ContentBox :title="title" :subtitle="subtitle" />
     <section class="section">
       <div class="content">
         <h3>Pompes à chaleur Air/Eau, des solutions de chauffage sur mesure</h3>
         <p>
-          La polyvalence de nos équipes est l’une de nos fiertés. Riches des acquis de nos collaborateurs, nous sommes
+          <span class="tabulation"></span>Notre polyvalence est l’une de nos fiertés. Riches de nos acquis, nous sommes
           en mesure d’<strong>intervenir avec efficacité dans le domaine du chauffage</strong>. Qu’il s’agisse de
-          <strong>rénover une installation existante</strong> ou d’<strong>équiper une construction neuve</strong>, nous
+          <strong>rénover une installation existante</strong> ou <strong>d’équiper une construction neuve</strong>, nous
           sommes sur tous les fronts.
         </p>
         <p>
-          Vous résidez sur les bassins du Puy-en-Velay, de l'emblavez ou d'Yssingeaux.
-          <strong>Vous recherchez un chauffagiste compétent&nbsp;</strong>? Nous prennons en charge les demandes
+          <span class="tabulation"></span>Vous résidez sur les bassins du Puy-en-Velay, de l'Emblavez ou d'Yssingeaux.
+          <strong>Vous recherchez un chauffagiste compétent&nbsp;</strong>? Nous prenons en charge les demandes
           suivantes&nbsp;:
         </p>
         <ul>
@@ -58,20 +58,26 @@ const subtitle = "Nous vous accompagnons dans vos travaux d'amelioration énerg�
         </p>
       </div>
     </section>
-    <BandeauItem :image="Clim" />
+    <BandeauItem :image="Clims" />
     <section class="section">
       <div class="content">
         <h3>Pompes à chaleur Air/Air, climatisation réversible</h3>
         <p>
-          Notre <strong>savoir-faire</strong> de haute technicité nous permet d’intervenir dans en résidentiel comme en
-          tertiaire. Nos équipes assurent la pose et l’entretien de vos équipements.
+          <span class="tabulation"></span>Notre <strong>savoir-faire</strong> de haute technicité nous permet
+          d’intervenir, en résidentiel comme en tertiaire. Nous assurons la pose et l’entretien de vos équipements.
         </p>
         <p>
-          Pendant son fonctionnement la climatisation absorbe les calories contenues dans l’air, c’est un échange
-          thermique entre l’unité intérieure et l’unité extérieure, pour les déplacer soit vers l’intérieur en mode
-          chauffage, soit vers l’extérieur en mode rafraîchissement. En mode réversible la climatisation consomme 1Kwh
-          électricité et restitue 3Kwh de chauffage, vous réalisez ainsi
-          <strong>jusqu'à 70% d'économie</strong> d'énergie par rapport à un chauffage électrique.
+          <span class="tabulation"></span>Pendant son fonctionnement la climatisation absorbe les calories contenues
+          dans l’air, c’est un échange thermique entre l’unité intérieure et l’unité extérieure. Ceci est réversible :
+        </p>
+        <ul>
+          <li><strong>de l'intérieur vers l'extérieur en mode rafraîchissement</strong></li>
+          <li><strong>de l'extérieur vers l'intérieur en mode chauffage</strong></li>
+        </ul>
+        <p>
+          <span class="tabulation"></span>En mode réversible la climatisation consomme 1Kwh électricité et restitue 3Kwh
+          de chauffage, vous réalisez ainsi <strong>jusqu'à 70% d'économie</strong> d'énergie par rapport à un chauffage
+          électrique.
         </p>
         <p>Nos différents systèmes de climatisation :</p>
         <ul>

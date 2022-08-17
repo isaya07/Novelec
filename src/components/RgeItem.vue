@@ -9,7 +9,7 @@ import RgeLogo from "../assets/logo-qualipac-RGE.webp"
     <p>
       Novelec a su apporter la preuve des compétences techniques en matières d'électricité, de chauffage et de
       climation. Ayant démontré l’excellence de son savoir-faire, nous nous sommes vu attribuer les certifications
-      suivantes&nbsp;:
+      suivantes :
     </p>
     <ul>
       <li>RGE (Reconnu Garant de l’Environnement)&nbsp;;</li>
@@ -19,9 +19,9 @@ import RgeLogo from "../assets/logo-qualipac-RGE.webp"
       Si ces labels vous assurent de<strong> faire appel à une entreprise qui maîtrise son sujet</strong>, ils jouent
       aussi un rôle dans le financement de vos travaux. En effet, grâce à la certification RGE,<strong>
         les prestations d’amélioration énergétique de votre habitat peuvent être éligibles à des aides financières
-        spécifiques</strong
-      >&nbsp;: Primes CEE, MaPrimeRénov’, TVA à taux réduit, Éco-PTZ… N’hésitez pas à nous contacter pour en savoir
-      plus.
+        spécifiques :
+      </strong>
+      Primes CEE, MaPrimeRénov’, TVA à taux réduit, Éco-PTZ… N’hésitez pas à nous contacter pour en savoir plus.
     </p>
   </div>
 </template>

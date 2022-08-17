@@ -25,7 +25,7 @@
         </div>
         <div class="mt-1 has-text-weight-bold is-size-5">Respect des délais</div>
         <div class="divider"></div>
-        <div>NNous vous garantissons un travail soigné, réalisé à temps.</div>
+        <div>Nous vous garantissons un travail soigné, réalisé à temps.</div>
       </div>
       <div class="column is-one-quarter">
         <div class="circle has-text-white is-size-3">
