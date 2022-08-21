@@ -1,3 +1,0 @@
-User-Agent: *
-Disallow: /gestion/
-Sitemap: https://www.novelec43.fr/sitemap.xml

@@ -1,1 +1,0 @@
-import{o as e,b as t,d as s,u as o}from"./vendor.9a048686.js";const c="/assets/404.806926db.webp",a={class:"container is-widescreen has-text-left"},n={class:"section"},r={class:"box"},_=["src"],u={__name:"NotFound",setup(i){return(d,l)=>(e(),t("div",a,[s("section",n,[s("div",r,[s("img",{class:"mb-2",src:o(c),alt:"404 Error"},null,8,_)])])]))}};export{u as default};
