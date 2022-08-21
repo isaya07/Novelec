@@ -36,6 +36,7 @@ function onExpired() {
 }
 
 function onVerify(response) {
+  console.log(response)
   emit("recaptchaVerify", response)
 }
 </script>

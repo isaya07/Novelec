@@ -63,8 +63,8 @@ router.beforeEach((to, from, next) => {
   setMetaContent('name="description"', to.meta.description)
   setMetaContent('itemprop="description"', to.meta.description)
   setMetaContent('property="og:description"', to.meta.description)
-  setAttributes(`link[rel="canonical"]`, "href", "http://www.novelec43.fr" + to.fullPath)
-  setMetaContent('property="og:url"', "http://www.novelec43.fr" + to.fullPath)
+  setAttributes(`link[rel="canonical"]`, "href", "https://www.novelec43.fr" + to.fullPath)
+  setMetaContent('property="og:url"', "https://www.novelec43.fr" + to.fullPath)
   next()
 })
 

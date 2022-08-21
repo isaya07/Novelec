@@ -200,13 +200,11 @@ function showResult(reponse) {
 
 function httpPost(formData, callback) {
   var xmlHttp = new XMLHttpRequest()
-  xmlHttp.open("POST", "https://formsubmit.co/ajax/2eece65b36ddffd4b1682de2f7dd00be", true) // true for asynchronous
-  xmlHttp.setRequestHeader("Content-type", "application/json")
-  xmlHttp.setRequestHeader("Accept", "application/json")
+  xmlHttp.open("POST", "https://g649qaueuj.preview.infomaniak.website/api/mail", true) // true for asynchronous
   xmlHttp.onload = function () {
     callback(this.responseText)
   }
-  xmlHttp.send(JSON.stringify(formData))
+  xmlHttp.send(formData)
 }
 
 function debounce(fn, delay) {
@@ -302,14 +300,15 @@ async function onSubmit() {
   }
 }
 function onVerify() {
-  const data = {}
-  data.nom = nom.value
-  data.email = email.value
-  data.message = message.value
-  if (tel.value) data.tel = tel.value
-  if (sujet.value) data.sujet = sujet.value
+  var data = new FormData()
+  data.append("nom", nom.value)
+  data.append("email", email.value)
+  data.append("message", message.value)
+  if (tel.value) data.append("tel", tel.value)
+  if (sujet.value) data.append("sujet", sujet.value)
   //TODO validate response
   httpPost(data, (reponse) => {
+    console.log(reponse)
     showResult(JSON.parse(reponse))
     loading.value = false
   })
