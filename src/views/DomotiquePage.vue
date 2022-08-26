@@ -4,8 +4,8 @@ import Domo from "../assets/Bandeau/domotique.jpg?width=400;800;1100&webp"
 import BandeauItem from "../components/BandeauItem.vue"
 import ContentBox from "../components/ContentBox.vue"
 import DomotiqueItem from "../components/DomotiqueItem.vue"
-const title = "Domotique, Immotique, Gestion technique du batiment"
-const subtitle = "L'entreprise Novelec vous aide a rendre votre habitat, bureau plus simple, plus comfortable."
+const title = "Domotique, Immotique, Gestion technique du bâtiment"
+const subtitle = "L'entreprise Novelec vous aide à rendre votre habitat, bureau plus simple, plus confortable."
 </script>
 
 <template>

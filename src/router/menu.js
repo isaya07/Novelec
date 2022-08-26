@@ -1,8 +1,8 @@
 const Menu = [
   {
-    name: "Acceuil",
+    name: "Accueil",
     path: "/",
-    alias: "/acceuil",
+    alias: "/accueil",
     icon: "MyHome",
     component: () => import("../views/MainPage.vue"),
     meta: {
@@ -43,7 +43,7 @@ const Menu = [
     },
   },
   {
-    name: "Pompe a Chaleur",
+    name: "Pompe à Chaleur",
     path: "/pompeachaleur",
     icon: "HeatPumpOutline",
     component: () => import("../views/PompePage.vue"),

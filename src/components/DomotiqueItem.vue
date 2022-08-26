@@ -28,7 +28,7 @@ import DomoAtout from "../components/DomoAtout.vue"
     </DomoAtout>
     <DomoAtout
       title="Distribution Audio-Vidéo"
-      text="Diffusez votre musique préférée dans toutes les pièces de la maison. Creer un homme cinema connecté avec 
+      text="Diffuser votre musique préférée dans toutes les pièces de la maison. Créer un home cinéma connecté avec 
       votre installation."
     >
       <mdi-Play-Pause />

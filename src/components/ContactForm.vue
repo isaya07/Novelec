@@ -30,7 +30,7 @@
     </div>
     <div class="field">
       <label class="label"
-        >Couriel<em><strong>*</strong></em></label
+        >Courriel<em><strong>*</strong></em></label
       >
       <div class="control has-icons-left has-icons-right">
         <input

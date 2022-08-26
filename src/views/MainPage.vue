@@ -23,9 +23,9 @@ const subtitle =
         <h3>Bienvenue sur le site de l'entreprise Novelec</h3>
         <p class="texte">
           <span class="tabulation"></span>
-          Novelec est une entreprise spécialisée dans les métiers technique du bâtiment. Nous intervenons sur tous types
-          de bâtiments résidentiel ou tertiaire. Installation électrique classique, domotisée, plomberie, chauffage et
-          climatisation, nous vous accompagnons dans tous vos projets de rénovation, construction neuve,
+          Novelec est une entreprise spécialisée dans les métiers techniques du bâtiment. Nous intervenons sur tous
+          types de bâtiments résidentiel ou tertiaire. Installation électrique classique, domotisée, plomberie,
+          chauffage et climatisation, nous vous accompagnons dans tous vos projets de rénovation, construction neuve,
           agrandissement...
         </p>
         <p class="texte">Nous réalisons pour vous :</p>
@@ -33,9 +33,9 @@ const subtitle =
           <li><strong>Installation Electrique,</strong> neuf, rénovation, tertiaire.</li>
           <li><strong>Installation Sanitaire,</strong> salle de bains, WC, locaux PMR.</li>
           <li><strong>Installation Domotisée</strong> afin que la maison intéragisse avec vous.</li>
-          <li><strong>Installation de Pompe a Chaleur</strong> remplacemnt, neuf.</li>
+          <li><strong>Installation de Pompe à Chaleur</strong> remplacement, neuf.</li>
           <li>
-            <strong>Installation de Climatisation reversible,</strong> idéale en remplacement d'un chauffage électrique.
+            <strong>Installation de Climatisation réversible,</strong> idéale en remplacement d'un chauffage électrique.
           </li>
         </ul>
         <p class="texte">

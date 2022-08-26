@@ -4,8 +4,8 @@ import Clims from "../assets/Bandeau/Climatisation.png?width=400;800;1100&webp"
 import BandeauItem from "../components/BandeauItem.vue"
 import ContentBox from "../components/ContentBox.vue"
 
-const title = "Pompe a Chaleur, climatisation réversible"
-const subtitle = "Nous vous accompagnons dans vos travaux d'amelioration énergétique"
+const title = "Pompe à Chaleur, climatisation réversible"
+const subtitle = "Nous vous accompagnons dans vos travaux d'amélioration énergétique"
 </script>
 
 <template>
@@ -29,22 +29,22 @@ const subtitle = "Nous vous accompagnons dans vos travaux d'amelioration énerg�
         <ul>
           <li>
             <strong>Mise en place de pompe à chaleur air-eau</strong>&nbsp;: une solution parfaite pour remplacer une
-            ancienne chaudière (fioul ou gaz) ou pour <strong>créer un système de chauffage économique</strong>
+            ancienne chaudière (fioul ou gaz) ou pour <strong>créer un système de chauffage économique.</strong>
           </li>
-          <li><strong>Installation de chaudière électrique</strong> (si demandes spécifiques)</li>
-          <li><strong>Pose de plancher chauffant</strong></li>
+          <li><strong>Installation de chaudière électrique</strong> (si demandes spécifiques).</li>
+          <li><strong>Pose de plancher chauffant.</strong></li>
           <li>
             <strong>Création de circuit de chauffage complet</strong>&nbsp;: depuis la mise en place des radiateurs
-            jusqu’à la pose de la chaudière
+            jusqu’à la pose de la chaudière.
           </li>
           <li>
             <strong>Désembouage de circuit de chauffage&nbsp;</strong>: consiste à retirer tous les dépôts qui se
             forment au fil des années dans votre réseau hydraulique ou votre plancher chauffant. Votre installation
-            retrouve une capacité de chauffe optimale
+            retrouve une capacité de chauffe optimale.
           </li>
         </ul>
         <p>
-          <strong>Nous somme certifiée RGE et QualiPAC</strong>. Du fait de ces labels, nos prestations en lien avec
+          <strong>Nous sommes certifiés RGE et QualiPAC</strong>. Du fait de ces labels, nos prestations en lien avec
           l’amélioration des performances énergétiques de votre logement peuvent vous rendre éligibles à des<strong>
             aides financières</strong
           >. Primes CEE, Éco-PTZ, MaPrimeRénov’… certains de ces dispositifs sont très avantageux pour<strong>
@@ -71,8 +71,8 @@ const subtitle = "Nous vous accompagnons dans vos travaux d'amelioration énerg�
           dans l’air, c’est un échange thermique entre l’unité intérieure et l’unité extérieure. Ceci est réversible :
         </p>
         <ul>
-          <li><strong>de l'intérieur vers l'extérieur en mode rafraîchissement</strong></li>
-          <li><strong>de l'extérieur vers l'intérieur en mode chauffage</strong></li>
+          <li><strong>de l'intérieur vers l'extérieur en mode rafraîchissement.</strong></li>
+          <li><strong>de l'extérieur vers l'intérieur en mode chauffage.</strong></li>
         </ul>
         <p>
           <span class="tabulation"></span>En mode réversible la climatisation consomme 1Kwh électricité et restitue 3Kwh
@@ -81,9 +81,9 @@ const subtitle = "Nous vous accompagnons dans vos travaux d'amelioration énerg�
         </p>
         <p>Nos différents systèmes de climatisation :</p>
         <ul>
-          <li><strong>climatiseur monobloc, split ou multisplit</strong></li>
-          <li><strong>Système gainable</strong></li>
-          <li><strong>Plafonnier et DRV/VRV</strong></li>
+          <li><strong>climatiseur monobloc, split ou multisplit.</strong></li>
+          <li><strong>Système gainable.</strong></li>
+          <li><strong>Plafonnier et DRV/VRV.</strong></li>
         </ul>
         <p>
           Tous les projets débutent par une étude personnalisée pour dimensionner l’installation à son environnement.

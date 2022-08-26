@@ -8,7 +8,7 @@ import RgeLogo from "../assets/logo-qualipac-RGE.webp"
     <h4 class="title is-4">RGE, QualiPAC&nbsp;: des certifications qui rassurent</h4>
     <p>
       Novelec a su apporter la preuve des compétences techniques en matières d'électricité, de chauffage et de
-      climation. Ayant démontré l’excellence de son savoir-faire, nous nous sommes vu attribuer les certifications
+      climatisation. Ayant démontré l’excellence de son savoir-faire, nous nous sommes vu attribuer les certifications
       suivantes :
     </p>
     <ul>

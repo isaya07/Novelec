@@ -5,7 +5,7 @@ const ContactForm = defineAsyncComponent(() => import("@/components/ContactForm.
 const GoogleFrame = defineAsyncComponent(() => import("@/components/GoogleFrame.vue"))
 
 const title = "Nous Contacter"
-const subtitle = "N'hésitez pas a nous contacté pour la réalisation de vos projets"
+const subtitle = "N'hésitez pas à nous contacter pour la réalisation de vos projets"
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const subtitle = "N'hésitez pas a nous contacté pour la réalisation de vos pr
     <section>
       <div class="content pt-3">
         <h3>Formulaire de contact :</h3>
-        <p class="texte">Veuillez remplir ce formulaire ou utilisé les coordoné en bas de page. Merci.</p>
+        <p class="texte">Veuillez remplir ce formulaire ou utiliser les coordonnées en bas de page. Merci.</p>
         <div class="columns is-desktop">
           <div class="column">
             <div class="box">
